@@ -42,7 +42,15 @@ pdf = ["pypdf>=5"]
 # 本地 Web 交互页
 ui = ["streamlit>=1.36"]
 # 开发
-dev = ["pytest>=8", "ruff>=0.6"]
+#
+# langgraph-checkpoint-sqlite 只被 `00-core/tests/test_graph.py` 用到
+# （验证"暂停 → 关连接 → 重开 → 恢复"）。它**不是** langgraph 的一部分，
+# 是独立的包 —— 漏了它测试在收集阶段就 ImportError（CI 踩过）。
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+    "langgraph-checkpoint-sqlite>=3",
+]
 
 [project.scripts]
 zhilun = "copilot.cli:main"

@@ -17,7 +17,6 @@ from pathlib import Path
 from typing import Any
 
 import pytest
-from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.types import Command
 
 from copilot.evidence.models import Document, InMemoryDocStore, StaticDoiResolver
@@ -259,7 +258,14 @@ def test_resume_after_restart(tmp_path: Path) -> None:
     这里用**落盘的 SqliteSaver**，第一段执行到 interrupt 后**关闭连接**，
     再用全新的 saver 与全新的图对象恢复 —— 等价于进程重启。
     若状态只存在内存里，这个测试必然失败。
+
+    ``langgraph-checkpoint-sqlite`` 是**独立的包**（不在 langgraph 核心里）。
+    装 ``.[dev]`` 就有；最小安装时**只跳过这一个用例**，而不是让整个测试
+    会话在收集阶段 ImportError。
     """
+    SqliteSaver = pytest.importorskip(
+        "langgraph.checkpoint.sqlite", reason="需要 langgraph-checkpoint-sqlite"
+    ).SqliteSaver
     db = tmp_path / "checkpoint.sqlite"
     cfg = config("t-restart")
     question = "Does the method improve accuracy?"
