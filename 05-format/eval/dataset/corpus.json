@@ -1,0 +1,1184 @@
+{
+  "manifest": {
+    "source": "arXiv API",
+    "endpoint": "http://export.arxiv.org/api/query",
+    "query": "cat:cs.IR AND abs:\"large language model\"",
+    "queries_used": [
+      "cat:cs.IR AND abs:\"large language model\""
+    ],
+    "fetched_at": "2026-10-16T13:48:33.492140+00:00",
+    "count": 60,
+    "note": "评测只读本缓存；语料漂移会破坏可复现性，故不现场抓取。"
+  },
+  "papers": [
+    {
+      "doc_id": "2411.18583v1",
+      "title": "Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation",
+      "abstract": "This research presents and compares multiple approaches to automate the generation of literature reviews using several Natural Language Processing (NLP) techniques and retrieval-augmented generation (RAG) with a Large Language Model (LLM). The ever-increasing number of research articles provides a huge challenge for manual literature review. It has resulted in an increased demand for automation. Developing a system capable of automatically generating the literature reviews from only the PDF files as input is the primary objective of this research work. The effectiveness of several Natural Language Processing (NLP) strategies, such as the frequency-based method (spaCy), the transformer model (Simple T5), and retrieval-augmented generation (RAG) with Large Language Model (GPT-3.5-turbo), is evaluated to meet the primary objective. The SciTLDR dataset is chosen for this research experiment and three distinct techniques are utilized to implement three different systems for auto-generating the literature reviews. The ROUGE scores are used for the evaluation of all three systems. Based on the evaluation, the Large Language Model GPT-3.5-turbo achieved the highest ROUGE-1 score, 0.364. The transformer model comes in second place and spaCy is at the last position. Finally, a graphical user interface is created for the best system based on the large language model.",
+      "authors": [
+        "Nurshat Fateh Ali",
+        "Md. Mahdi Mohtasim",
+        "Shakil Mosharrof",
+        "T. Gopi Krishna"
+      ],
+      "published": "2024-11-27T18:27:07Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "url": "http://arxiv.org/abs/2411.18583v1"
+    },
+    {
+      "doc_id": "2307.16376v1",
+      "title": "When Large Language Models Meet Personalization: Perspectives of Challenges and Opportunities",
+      "abstract": "The advent of large language models marks a revolutionary breakthrough in artificial intelligence. With the unprecedented scale of training and model parameters, the capability of large language models has been dramatically improved, leading to human-like performances in understanding, language synthesizing, and common-sense reasoning, etc. Such a major leap-forward in general AI capacity will change the pattern of how personalization is conducted. For one thing, it will reform the way of interaction between humans and personalization systems. Instead of being a passive medium of information filtering, large language models present the foundation for active user engagement. On top of such a new foundation, user requests can be proactively explored, and user's required information can be delivered in a natural and explainable way. For another thing, it will also considerably expand the scope of personalization, making it grow from the sole function of collecting personalized information to the compound function of providing personalized services. By leveraging large language models as general-purpose interface, the personalization systems may compile user requests into plans, calls the functions of external tools to execute the plans, and integrate the tools' outputs to complete the end-to-end personalization tasks. Today, large language models are still being developed, whereas the application in personalization is largely unexplored. Therefore, we consider it to be the right time to review the challenges in personalization and the opportunities to address them with LLMs. In particular, we dedicate this perspective paper to the discussion of the following aspects: the development and challenges for the existing personalization system, the newly emerged capabilities of large language models, and the potential ways of making use of large language models for personalization.",
+      "authors": [
+        "Jin Chen",
+        "Zheng Liu",
+        "Xu Huang",
+        "Chenwang Wu",
+        "Qi Liu",
+        "Gangwei Jiang",
+        "Yuanhao Pu",
+        "Yuxuan Lei",
+        "Xiaolong Chen",
+        "Xingmei Wang",
+        "Defu Lian",
+        "Enhong Chen"
+      ],
+      "published": "2023-07-31T02:48:56Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "url": "http://arxiv.org/abs/2307.16376v1"
+    },
+    {
+      "doc_id": "2502.09797v2",
+      "title": "A Survey on LLM-based News Recommender Systems",
+      "abstract": "News recommender systems play a critical role in mitigating the information overload problem. In recent years, due to the successful applications of large language model technologies, researchers have utilized Discriminative Large Language Models (DLLMs) or Generative Large Language Models (GLLMs) to improve the performance of news recommender systems. Although several recent surveys review significant challenges for deep learning-based news recommender systems, such as fairness, privacy-preserving, and responsibility, there is a lack of a systematic survey on Large Language Model (LLM)-based news recommender systems. In order to review different core methodologies and explore potential issues systematically, we categorize DLLM-based and GLLM-based news recommender systems under the umbrella of LLM-based news recommender systems. In this survey, we first overview the development of deep learning-based news recommender systems. Then, we review LLM-based news recommender systems based on three aspects: news-oriented modeling, user-oriented modeling, and prediction-oriented modeling. Next, we examine the challenges from various perspectives, including datasets, benchmarking tools, and methodologies. Furthermore, we conduct extensive experiments to analyze how large language model technologies affect the performance of different news recommender systems. Finally, we comprehensively explore the future directions for LLM-based news recommendations in the era of LLMs.",
+      "authors": [
+        "Rongyao Wang",
+        "Veronica Liesaputra",
+        "Zhiyi Huang"
+      ],
+      "published": "2025-02-13T22:13:59Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "url": "http://arxiv.org/abs/2502.09797v2"
+    },
+    {
+      "doc_id": "2308.10053v1",
+      "title": "Large Language Models as Zero-Shot Conversational Recommenders",
+      "abstract": "In this paper, we present empirical studies on conversational recommendation tasks using representative large language models in a zero-shot setting with three primary contributions. (1) Data: To gain insights into model behavior in \"in-the-wild\" conversational recommendation scenarios, we construct a new dataset of recommendation-related conversations by scraping a popular discussion website. This is the largest public real-world conversational recommendation dataset to date. (2) Evaluation: On the new dataset and two existing conversational recommendation datasets, we observe that even without fine-tuning, large language models can outperform existing fine-tuned conversational recommendation models. (3) Analysis: We propose various probing tasks to investigate the mechanisms behind the remarkable performance of large language models in conversational recommendation. We analyze both the large language models' behaviors and the characteristics of the datasets, providing a holistic understanding of the models' effectiveness, limitations and suggesting directions for the design of future conversational recommenders",
+      "authors": [
+        "Zhankui He",
+        "Zhouhang Xie",
+        "Rahul Jha",
+        "Harald Steck",
+        "Dawen Liang",
+        "Yesu Feng",
+        "Bodhisattwa Prasad Majumder",
+        "Nathan Kallus",
+        "Julian McAuley"
+      ],
+      "published": "2023-08-19T15:29:45Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "url": "http://arxiv.org/abs/2308.10053v1"
+    },
+    {
+      "doc_id": "2404.14760v2",
+      "title": "Retrieval Augmented Generation for Domain-specific Question Answering",
+      "abstract": "Question answering (QA) has become an important application in the advanced development of large language models. General pre-trained large language models for question-answering are not trained to properly understand the knowledge or terminology for a specific domain, such as finance, healthcare, education, and customer service for a product. To better cater to domain-specific understanding, we build an in-house question-answering system for Adobe products. We propose a novel framework to compile a large question-answer database and develop the approach for retrieval-aware finetuning of a Large Language model. We showcase that fine-tuning the retriever leads to major improvements in the final generation. Our overall approach reduces hallucinations during generation while keeping in context the latest retrieval information for contextual grounding.",
+      "authors": [
+        "Sanat Sharma",
+        "David Seunghyun Yoon",
+        "Franck Dernoncourt",
+        "Dewang Sultania",
+        "Karishma Bagga",
+        "Mengjiao Zhang",
+        "Trung Bui",
+        "Varun Kotte"
+      ],
+      "published": "2024-04-23T05:51:45Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "url": "http://arxiv.org/abs/2404.14760v2"
+    },
+    {
+      "doc_id": "2609.11414v1",
+      "title": "SWRouter: Similarity-Contractive Window Routing for Multi-Turn Large Language Model Conversations",
+      "abstract": "Large language models exhibit complementary strengths, motivating routing methods that dispatch each query to the most suitable model. Although existing routers are effective in single-turn settings, they do not directly transfer to multi-turn dialogue, where routing performance critically depends on how historical context is segmented, retained, and incorporated into the current prompt. This introduces two fundamental challenges: preventing information loss and information confusion during context construction, and evaluating routing quality without conflating model selection with prompt construction quality. In this paper, we propose SWRouter, a Similarity-Contractive Window Router for multi-turn large language model routing. SWRouter combines a similarity-based context segmentation mechanism for prompt construction with a dual-metric evaluation framework that decouples construction accuracy from router performance. Experiments on multi-turn dialogue benchmarks demonstrate that SWRouter consistently surpasses strong baselines, achieving a 16.26% improvement in evaluation accuracy over the best individual large language model and an additional 8.22% gain over the Conv-ID Context baseline. Our results highlight that multi-turn large language model routing requires a joint design of context construction and evaluation, rather than a direct extension of single-turn routing methods.",
+      "authors": [
+        "Yu Wang",
+        "Yuchen Li",
+        "Rui Kong",
+        "Xinran Chen",
+        "Jiamin Chen",
+        "Hengyi Cai",
+        "Shuaiqiang Wang",
+        "Jiashu Zhao",
+        "Yulun Zhang",
+        "Zhonghao Lyu",
+        "Haoyi Xiong",
+        "Linghe Kong",
+        "Jimmy Xiangji Huang",
+        "Dawei Yin"
+      ],
+      "published": "2026-09-10T11:45:55Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2609.11414v1"
+    },
+    {
+      "doc_id": "2307.05722v3",
+      "title": "Exploring Large Language Model for Graph Data Understanding in Online Job Recommendations",
+      "abstract": "Large Language Models (LLMs) have revolutionized natural language processing tasks, demonstrating their exceptional capabilities in various domains. However, their potential for behavior graph understanding in job recommendations remains largely unexplored. This paper focuses on unveiling the capability of large language models in understanding behavior graphs and leveraging this understanding to enhance recommendations in online recruitment, including the promotion of out-of-distribution (OOD) application. We present a novel framework that harnesses the rich contextual information and semantic representations provided by large language models to analyze behavior graphs and uncover underlying patterns and relationships. Specifically, we propose a meta-path prompt constructor that leverages LLM recommender to understand behavior graphs for the first time and design a corresponding path augmentation module to alleviate the prompt bias introduced by path-based sequence input. By leveraging this capability, our framework enables personalized and accurate job recommendations for individual users. We evaluate the effectiveness of our approach on a comprehensive dataset and demonstrate its ability to improve the relevance and quality of recommended quality. This research not only sheds light on the untapped potential of large language models but also provides valuable insights for developing advanced recommendation systems in the recruitment market. The findings contribute to the growing field of natural language processing and offer practical implications for enhancing job search experiences. We release the code at https://github.com/WLiK/GLRec.",
+      "authors": [
+        "Likang Wu",
+        "Zhaopeng Qiu",
+        "Zhi Zheng",
+        "Hengshu Zhu",
+        "Enhong Chen"
+      ],
+      "published": "2023-07-10T11:29:41Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2307.05722v3"
+    },
+    {
+      "doc_id": "2311.03837v1",
+      "title": "OLaLa: Ontology Matching with Large Language Models",
+      "abstract": "Ontology (and more generally: Knowledge Graph) Matching is a challenging task where information in natural language is one of the most important signals to process. With the rise of Large Language Models, it is possible to incorporate this knowledge in a better way into the matching pipeline. A number of decisions still need to be taken, e.g., how to generate a prompt that is useful to the model, how information in the KG can be formulated in prompts, which Large Language Model to choose, how to provide existing correspondences to the model, how to generate candidates, etc. In this paper, we present a prototype that explores these questions by applying zero-shot and few-shot prompting with multiple open Large Language Models to different tasks of the Ontology Alignment Evaluation Initiative (OAEI). We show that with only a handful of examples and a well-designed prompt, it is possible to achieve results that are en par with supervised matching systems which use a much larger portion of the ground truth.",
+      "authors": [
+        "Sven Hertling",
+        "Heiko Paulheim"
+      ],
+      "published": "2023-11-07T09:34:20Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "url": "http://arxiv.org/abs/2311.03837v1"
+    },
+    {
+      "doc_id": "2311.03374v1",
+      "title": "Generative AI for Software Metadata: Overview of the Information Retrieval in Software Engineering Track at FIRE 2023",
+      "abstract": "The Information Retrieval in Software Engineering (IRSE) track aims to develop solutions for automated evaluation of code comments in a machine learning framework based on human and large language model generated labels. In this track, there is a binary classification task to classify comments as useful and not useful. The dataset consists of 9048 code comments and surrounding code snippet pairs extracted from open source github C based projects and an additional dataset generated individually by teams using large language models. Overall 56 experiments have been submitted by 17 teams from various universities and software companies. The submissions have been evaluated quantitatively using the F1-Score and qualitatively based on the type of features developed, the supervised learning model used and their corresponding hyper-parameters. The labels generated from large language models increase the bias in the prediction model but lead to less over-fitted results.",
+      "authors": [
+        "Srijoni Majumdar",
+        "Soumen Paul",
+        "Debjyoti Paul",
+        "Ayan Bandyopadhyay",
+        "Samiran Chattopadhyay",
+        "Partha Pratim Das",
+        "Paul D Clough",
+        "Prasenjit Majumder"
+      ],
+      "published": "2023-10-27T14:13:23Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2311.03374v1"
+    },
+    {
+      "doc_id": "2403.09599v1",
+      "title": "Logical Discrete Graphical Models Must Supplement Large Language Models for Information Synthesis",
+      "abstract": "Given the emergent reasoning abilities of large language models, information retrieval is becoming more complex. Rather than just retrieve a document, modern information retrieval systems advertise that they can synthesize an answer based on potentially many different documents, conflicting data sources, and using reasoning. We review recent literature and argue that the large language model has crucial flaws that prevent it from on its own ever constituting general intelligence, or answering general information synthesis requests. This review shows that the following are problems for large language models: hallucinations, complex reasoning, planning under uncertainty, and complex calculations. We outline how logical discrete graphical models can solve all of these problems, and outline a method of training a logical discrete model from unlabeled text.",
+      "authors": [
+        "Gregory Coppola"
+      ],
+      "published": "2024-03-14T17:40:20Z",
+      "categories": [
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2403.09599v1"
+    },
+    {
+      "doc_id": "2407.10020v1",
+      "title": "Causality extraction from medical text using Large Language Models (LLMs)",
+      "abstract": "This study explores the potential of natural language models, including large language models, to extract causal relations from medical texts, specifically from Clinical Practice Guidelines (CPGs). The outcomes causality extraction from Clinical Practice Guidelines for gestational diabetes are presented, marking a first in the field. We report on a set of experiments using variants of BERT (BioBERT, DistilBERT, and BERT) and using Large Language Models (LLMs), namely GPT-4 and LLAMA2. Our experiments show that BioBERT performed better than other models, including the Large Language Models, with an average F1-score of 0.72. GPT-4 and LLAMA2 results show similar performance but less consistency. We also release the code and an annotated a corpus of causal statements within the Clinical Practice Guidelines for gestational diabetes.",
+      "authors": [
+        "Seethalakshmi Gopalakrishnan",
+        "Luciana Garbayo",
+        "Wlodek Zadrozny"
+      ],
+      "published": "2024-07-13T22:33:29Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2407.10020v1"
+    },
+    {
+      "doc_id": "2408.05388v1",
+      "title": "Report on the 1st Workshop on Large Language Model for Evaluation in Information Retrieval (LLM4Eval 2024) at SIGIR 2024",
+      "abstract": "The first edition of the workshop on Large Language Model for Evaluation in Information Retrieval (LLM4Eval 2024) took place in July 2024, co-located with the ACM SIGIR Conference 2024 in the USA (SIGIR 2024). The aim was to bring information retrieval researchers together around the topic of LLMs for evaluation in information retrieval that gathered attention with the advancement of large language models and generative AI. Given the novelty of the topic, the workshop was focused around multi-sided discussions, namely panels and poster sessions of the accepted proceedings papers.",
+      "authors": [
+        "Hossein A. Rahmani",
+        "Clemencia Siro",
+        "Mohammad Aliannejadi",
+        "Nick Craswell",
+        "Charles L. A. Clarke",
+        "Guglielmo Faggioli",
+        "Bhaskar Mitra",
+        "Paul Thomas",
+        "Emine Yilmaz"
+      ],
+      "published": "2024-08-09T23:55:58Z",
+      "categories": [
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2408.05388v1"
+    },
+    {
+      "doc_id": "2305.01555v4",
+      "title": "How to Unleash the Power of Large Language Models for Few-shot Relation Extraction?",
+      "abstract": "Scaling language models have revolutionized widespread NLP tasks, yet little comprehensively explored few-shot relation extraction with large language models. In this paper, we investigate principal methodologies, in-context learning and data generation, for few-shot relation extraction via GPT-3.5 through exhaustive experiments. To enhance few-shot performance, we further propose task-related instructions and schema-constrained data generation. We observe that in-context learning can achieve performance on par with previous prompt learning approaches, and data generation with the large language model can boost previous solutions to obtain new state-of-the-art few-shot results on four widely-studied relation extraction datasets. We hope our work can inspire future research for the capabilities of large language models in few-shot relation extraction. Code is available in https://github.com/zjunlp/DeepKE/tree/main/example/llm.",
+      "authors": [
+        "Xin Xu",
+        "Yuqi Zhu",
+        "Xiaohan Wang",
+        "Ningyu Zhang"
+      ],
+      "published": "2023-05-02T15:55:41Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.DB",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "url": "http://arxiv.org/abs/2305.01555v4"
+    },
+    {
+      "doc_id": "2412.02142v1",
+      "title": "Personalized Multimodal Large Language Models: A Survey",
+      "abstract": "Multimodal Large Language Models (MLLMs) have become increasingly important due to their state-of-the-art performance and ability to integrate multiple data modalities, such as text, images, and audio, to perform complex tasks with high accuracy. This paper presents a comprehensive survey on personalized multimodal large language models, focusing on their architecture, training methods, and applications. We propose an intuitive taxonomy for categorizing the techniques used to personalize MLLMs to individual users, and discuss the techniques accordingly. Furthermore, we discuss how such techniques can be combined or adapted when appropriate, highlighting their advantages and underlying rationale. We also provide a succinct summary of personalization tasks investigated in existing research, along with the evaluation metrics commonly used. Additionally, we summarize the datasets that are useful for benchmarking personalized MLLMs. Finally, we outline critical open challenges. This survey aims to serve as a valuable resource for researchers and practitioners seeking to understand and advance the development of personalized multimodal large language models.",
+      "authors": [
+        "Junda Wu",
+        "Hanjia Lyu",
+        "Yu Xia",
+        "Zhehao Zhang",
+        "Joe Barrow",
+        "Ishita Kumar",
+        "Mehrnoosh Mirtaheri",
+        "Hongjie Chen",
+        "Ryan A. Rossi",
+        "Franck Dernoncourt",
+        "Tong Yu",
+        "Ruiyi Zhang",
+        "Jiuxiang Gu",
+        "Nesreen K. Ahmed",
+        "Yu Wang",
+        "Xiang Chen",
+        "Hanieh Deilamsalehy",
+        "Namyong Park",
+        "Sungchul Kim",
+        "Huanrui Yang",
+        "Subrata Mitra",
+        "Zhengmian Hu",
+        "Nedim Lipka",
+        "Dang Nguyen",
+        "Yue Zhao",
+        "Jiebo Luo",
+        "Julian McAuley"
+      ],
+      "published": "2024-12-03T03:59:03Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2412.02142v1"
+    },
+    {
+      "doc_id": "2501.06699v1",
+      "title": "Large Language Models, Knowledge Graphs and Search Engines: A Crossroads for Answering Users' Questions",
+      "abstract": "Much has been discussed about how Large Language Models, Knowledge Graphs and Search Engines can be combined in a synergistic manner. A dimension largely absent from current academic discourse is the user perspective. In particular, there remain many open questions regarding how best to address the diverse information needs of users, incorporating varying facets and levels of difficulty. This paper introduces a taxonomy of user information needs, which guides us to study the pros, cons and possible synergies of Large Language Models, Knowledge Graphs and Search Engines. From this study, we derive a roadmap for future research.",
+      "authors": [
+        "Aidan Hogan",
+        "Xin Luna Dong",
+        "Denny Vrandečić",
+        "Gerhard Weikum"
+      ],
+      "published": "2025-01-12T03:32:12Z",
+      "categories": [
+        "cs.AI",
+        "cs.IR",
+        "cs.SC"
+      ],
+      "url": "http://arxiv.org/abs/2501.06699v1"
+    },
+    {
+      "doc_id": "2512.16661v2",
+      "title": "Microsoft Academic Graph Information Retrieval for Research Recommendation and Assistance",
+      "abstract": "In today's information-driven world, access to scientific publications has become increasingly easy. At the same time, filtering through the massive volume of available research has become more challenging than ever. Graph Neural Networks (GNNs) and graph attention mechanisms have shown strong effectiveness in searching large-scale information databases, particularly when combined with modern large language models. In this paper, we propose an Attention-Based Subgraph Retriever, a GNN-as-retriever model that applies attention-based pruning to extract a refined subgraph, which is then passed to a large language model for advanced knowledge reasoning.",
+      "authors": [
+        "Shikshya Shiwakoti",
+        "Samuel Goldsmith",
+        "Ujjwal Pandit"
+      ],
+      "published": "2025-12-18T15:29:18Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "url": "http://arxiv.org/abs/2512.16661v2"
+    },
+    {
+      "doc_id": "2403.00807v1",
+      "title": "Enhancing Cloud-Based Large Language Model Processing with Elasticsearch and Transformer Models",
+      "abstract": "Large Language Models (LLMs) are a class of generative AI models built using the Transformer network, capable of leveraging vast datasets to identify, summarize, translate, predict, and generate language. LLMs promise to revolutionize society, yet training these foundational models poses immense challenges. Semantic vector search within large language models is a potent technique that can significantly enhance search result accuracy and relevance. Unlike traditional keyword-based search methods, semantic search utilizes the meaning and context of words to grasp the intent behind queries and deliver more precise outcomes. Elasticsearch emerges as one of the most popular tools for implementing semantic search an exceptionally scalable and robust search engine designed for indexing and searching extensive datasets. In this article, we delve into the fundamentals of semantic search and explore how to harness Elasticsearch and Transformer models to bolster large language model processing paradigms. We gain a comprehensive understanding of semantic search principles and acquire practical skills for implementing semantic search in real-world model application scenarios.",
+      "authors": [
+        "Chunhe Ni",
+        "Jiang Wu",
+        "Hongbo Wang",
+        "Wenran Lu",
+        "Chenwei Zhang"
+      ],
+      "published": "2024-02-24T12:31:22Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL",
+        "cs.DC",
+        "cs.DL"
+      ],
+      "url": "http://arxiv.org/abs/2403.00807v1"
+    },
+    {
+      "doc_id": "2311.07838v3",
+      "title": "LLatrieval: LLM-Verified Retrieval for Verifiable Generation",
+      "abstract": "Verifiable generation aims to let the large language model (LLM) generate text with supporting documents, which enables the user to flexibly verify the answer and makes the LLM's output more reliable. Retrieval plays a crucial role in verifiable generation. Specifically, the retrieved documents not only supplement knowledge to help the LLM generate correct answers, but also serve as supporting evidence for the user to verify the LLM's output. However, the widely used retrievers become the bottleneck of the entire pipeline and limit the overall performance. Their capabilities are usually inferior to LLMs since they often have much fewer parameters than the large language model and have not been demonstrated to scale well to the size of LLMs. If the retriever does not correctly find the supporting documents, the LLM can not generate the correct and verifiable answer, which overshadows the LLM's remarkable abilities. To address these limitations, we propose \\LLatrieval (Large Language Model Verified Retrieval), where the LLM updates the retrieval result until it verifies that the retrieved documents can sufficiently support answering the question. Thus, the LLM can iteratively provide feedback to retrieval and facilitate the retrieval result to fully support verifiable generation. Experiments show that LLatrieval significantly outperforms extensive baselines and achieves state-of-the-art results.",
+      "authors": [
+        "Xiaonan Li",
+        "Changtai Zhu",
+        "Linyang Li",
+        "Zhangyue Yin",
+        "Tianxiang Sun",
+        "Xipeng Qiu"
+      ],
+      "published": "2023-11-14T01:38:02Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2311.07838v3"
+    },
+    {
+      "doc_id": "2510.15722v1",
+      "title": "The 3rd Place Solution of CCIR CUP 2025: A Framework for Retrieval-Augmented Generation in Multi-Turn Legal Conversation",
+      "abstract": "Retrieval-Augmented Generation has made significant progress in the field of natural language processing. By combining the advantages of information retrieval and large language models, RAG can generate relevant and contextually appropriate responses based on items retrieved from reliable sources. This technology has demonstrated outstanding performance across multiple domains, but its application in the legal field remains in its exploratory phase. In this paper, we introduce our approach for \"Legal Knowledge Retrieval and Generation\" in CCIR CUP 2025, which leverages large language models and information retrieval systems to provide responses based on laws in response to user questions.",
+      "authors": [
+        "Da Li",
+        "Zecheng Fang",
+        "Qiang Yan",
+        "Wei Huang",
+        "Xuanpu Luo"
+      ],
+      "published": "2025-10-17T15:12:15Z",
+      "categories": [
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2510.15722v1"
+    },
+    {
+      "doc_id": "2402.13750v1",
+      "title": "Breaking the Barrier: Utilizing Large Language Models for Industrial Recommendation Systems through an Inferential Knowledge Graph",
+      "abstract": "Recommendation systems are widely used in e-commerce websites and online platforms to address information overload. However, existing systems primarily rely on historical data and user feedback, making it difficult to capture user intent transitions. Recently, Knowledge Base (KB)-based models are proposed to incorporate expert knowledge, but it struggle to adapt to new items and the evolving e-commerce environment. To address these challenges, we propose a novel Large Language Model based Complementary Knowledge Enhanced Recommendation System (LLM-KERec). It introduces an entity extractor that extracts unified concept terms from item and user information. To provide cost-effective and reliable prior knowledge, entity pairs are generated based on entity popularity and specific strategies. The large language model determines complementary relationships in each entity pair, constructing a complementary knowledge graph. Furthermore, a new complementary recall module and an Entity-Entity-Item (E-E-I) weight decision model refine the scoring of the ranking model using real complementary exposure-click samples. Extensive experiments conducted on three industry datasets demonstrate the significant performance improvement of our model compared to existing approaches. Additionally, detailed analysis shows that LLM-KERec enhances users' enthusiasm for consumption by recommending complementary items. In summary, LLM-KERec addresses the limitations of traditional recommendation systems by incorporating complementary knowledge and utilizing a large language model to capture user intent transitions, adapt to new items, and enhance recommendation efficiency in the evolving e-commerce landscape.",
+      "authors": [
+        "Qian Zhao",
+        "Hao Qian",
+        "Ziqi Liu",
+        "Gong-Duo Zhang",
+        "Lihong Gu"
+      ],
+      "published": "2024-02-21T12:22:01Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "url": "http://arxiv.org/abs/2402.13750v1"
+    },
+    {
+      "doc_id": "2501.01945v2",
+      "title": "Cold-Start Recommendation towards the Era of Large Language Models (LLMs): A Comprehensive Survey and Roadmap",
+      "abstract": "Cold-start problem is one of the long-standing challenges in recommender systems, focusing on accurately modeling new or interaction-limited users or items to provide better recommendations. Due to the diversification of internet platforms and the exponential growth of users and items, the importance of cold-start recommendation (CSR) is becoming increasingly evident. At the same time, large language models (LLMs) have achieved tremendous success and possess strong capabilities in modeling user and item information, providing new potential for cold-start recommendations. However, the research community on CSR still lacks a comprehensive review and reflection in this field. Based on this, in this paper, we stand in the context of the era of large language models and provide a comprehensive review and discussion on the roadmap, related literature, and future directions of CSR. Specifically, we have conducted an exploration of the development path of how existing CSR utilizes information, from content features, graph relations, and domain information, to the world knowledge possessed by large language models, aiming to provide new insights for both the research and industrial communities on CSR. Related resources of cold-start recommendations are collected and continuously updated for the community in https://github.com/YuanchenBei/Awesome-Cold-Start-Recommendation.",
+      "authors": [
+        "Weizhi Zhang",
+        "Yuanchen Bei",
+        "Liangwei Yang",
+        "Henry Peng Zou",
+        "Peilin Zhou",
+        "Aiwei Liu",
+        "Yinghui Li",
+        "Hao Chen",
+        "Jianling Wang",
+        "Yu Wang",
+        "Feiran Huang",
+        "Sheng Zhou",
+        "Jiajun Bu",
+        "Allen Lin",
+        "James Caverlee",
+        "Fakhri Karray",
+        "Irwin King",
+        "Philip S. Yu"
+      ],
+      "published": "2025-01-03T18:51:18Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "url": "http://arxiv.org/abs/2501.01945v2"
+    },
+    {
+      "doc_id": "2406.16383v2",
+      "title": "Context-augmented Retrieval: A Novel Framework for Fast Information Retrieval based Response Generation using Large Language Model",
+      "abstract": "Generating high-quality answers consistently by providing contextual information embedded in the prompt passed to the Large Language Model (LLM) is dependent on the quality of information retrieval. As the corpus of contextual information grows, the answer/inference quality of Retrieval Augmented Generation (RAG) based Question Answering (QA) systems declines. This work solves this problem by combining classical text classification with the Large Language Model (LLM) to enable quick information retrieval from the vector store and ensure the relevancy of retrieved information. For the same, this work proposes a new approach Context Augmented retrieval (CAR), where partitioning of vector database by real-time classification of information flowing into the corpus is done. CAR demonstrates good quality answer generation along with significant reduction in information retrieval and answer generation time.",
+      "authors": [
+        "Sai Ganesh",
+        "Anupam Purwar",
+        "Gautam B"
+      ],
+      "published": "2024-06-24T07:52:05Z",
+      "categories": [
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2406.16383v2"
+    },
+    {
+      "doc_id": "2311.15716v1",
+      "title": "Justifiable Artificial Intelligence: Engineering Large Language Models for Legal Applications",
+      "abstract": "In this work, I discuss how Large Language Models can be applied in the legal domain, circumventing their current drawbacks. Despite their large success and acceptance, their lack of explainability hinders legal experts to trust in their output, and this happens rightfully so. However, in this paper, I argue in favor of a new view, Justifiable Artificial Intelligence, instead of focusing on Explainable Artificial Intelligence. I discuss in this paper how gaining evidence for and against a Large Language Model's output may make their generated texts more trustworthy - or hold them accountable for misinformation.",
+      "authors": [
+        "Sabine Wehnert"
+      ],
+      "published": "2023-11-27T10:59:16Z",
+      "categories": [
+        "cs.CL",
+        "cs.HC",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2311.15716v1"
+    },
+    {
+      "doc_id": "2405.11461v1",
+      "title": "DocReLM: Mastering Document Retrieval with Language Model",
+      "abstract": "With over 200 million published academic documents and millions of new documents being written each year, academic researchers face the challenge of searching for information within this vast corpus. However, existing retrieval systems struggle to understand the semantics and domain knowledge present in academic papers. In this work, we demonstrate that by utilizing large language models, a document retrieval system can achieve advanced semantic understanding capabilities, significantly outperforming existing systems. Our approach involves training the retriever and reranker using domain-specific data generated by large language models. Additionally, we utilize large language models to identify candidates from the references of retrieved papers to further enhance the performance. We use a test set annotated by academic researchers in the fields of quantum physics and computer vision to evaluate our system's performance. The results show that DocReLM achieves a Top 10 accuracy of 44.12% in computer vision, compared to Google Scholar's 15.69%, and an increase to 36.21% in quantum physics, while that of Google Scholar is 12.96%.",
+      "authors": [
+        "Gengchen Wei",
+        "Xinle Pang",
+        "Tianning Zhang",
+        "Yu Sun",
+        "Xun Qian",
+        "Chen Lin",
+        "Han-Sen Zhong",
+        "Wanli Ouyang"
+      ],
+      "published": "2024-05-19T06:30:22Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "url": "http://arxiv.org/abs/2405.11461v1"
+    },
+    {
+      "doc_id": "2403.08844v1",
+      "title": "AcademiaOS: Automating Grounded Theory Development in Qualitative Research with Large Language Models",
+      "abstract": "AcademiaOS is a first attempt to automate grounded theory development in qualitative research with large language models. Using recent large language models' language understanding, generation, and reasoning capabilities, AcademiaOS codes curated qualitative raw data such as interview transcripts and develops themes and dimensions to further develop a grounded theoretical model, affording novel insights. A user study (n=19) suggests that the system finds acceptance in the academic community and exhibits the potential to augment humans in qualitative research. AcademiaOS has been made open-source for others to build upon and adapt to their use cases.",
+      "authors": [
+        "Thomas Übellacker"
+      ],
+      "published": "2024-03-13T15:54:49Z",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2403.08844v1"
+    },
+    {
+      "doc_id": "2502.18480v1",
+      "title": "QExplorer: Large Language Model Based Query Extraction for Toxic Content Exploration",
+      "abstract": "Automatically extracting effective queries is challenging in information retrieval, especially in toxic content exploration, as such content is likely to be disguised. With the recent achievements in generative Large Language Model (LLM), we are able to leverage the capabilities of LLMs to extract effective queries for similar content exploration directly. This study proposes QExplorer, an approach of large language model based Query Extraction for toxic content Exploration. The QExplorer approach involves a 2-stage training process: instruction Supervised FineTuning (SFT) and preference alignment using Direct Preference Optimization (DPO), as well as the datasets construction with feedback of search system. To verify the effectiveness of QExplorer, a series of offline and online experiments are conducted on our real-world system. The offline empirical results demonstrate that the performance of our automatic query extraction outperforms that of several LLMs and humans. The online deployment shows a significant increase in the detection of toxic items.",
+      "authors": [
+        "Shaola Ren",
+        "Li Ke",
+        "Longtao Huang",
+        "Dehong Gao",
+        "Hui Xue"
+      ],
+      "published": "2025-02-06T06:11:58Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "url": "http://arxiv.org/abs/2502.18480v1"
+    },
+    {
+      "doc_id": "2401.01330v2",
+      "title": "TREC iKAT 2023: The Interactive Knowledge Assistance Track Overview",
+      "abstract": "Conversational Information Seeking has evolved rapidly in the last few years with the development of Large Language Models providing the basis for interpreting and responding in a naturalistic manner to user requests. iKAT emphasizes the creation and research of conversational search agents that adapt responses based on the user's prior interactions and present context. This means that the same question might yield varied answers, contingent on the user's profile and preferences. The challenge lies in enabling Conversational Search Agents (CSA) to incorporate personalized context to effectively guide users through the relevant information to them. iKAT's first year attracted seven teams and a total of 24 runs. Most of the runs leveraged Large Language Models (LLMs) in their pipelines, with a few focusing on a generate-then-retrieve approach.",
+      "authors": [
+        "Mohammad Aliannejadi",
+        "Zahra Abbasiantaeb",
+        "Shubham Chatterjee",
+        "Jeffery Dalton",
+        "Leif Azzopardi"
+      ],
+      "published": "2024-01-02T18:40:03Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "url": "http://arxiv.org/abs/2401.01330v2"
+    },
+    {
+      "doc_id": "2607.24417v1",
+      "title": "CORE: A Unified Cascaded Ordinal Relevance Estimation Framework for E-commerce Search",
+      "abstract": "Ranking relevance is a fundamental task in e-commerce search, directly affecting ranking quality and consumer experience. Although inherently an ordinal classification problem, it is commonly formulated as conventional multi-class classification, which overlooks the natural order among relevance levels and assigns equal penalties to adjacent and distant misclassifications. This mismatch leads to suboptimal learning objectives for practical relevance evaluation. To address this issue, we propose a unified cascaded binary classification framework applicable to both large language model inference and online BERT-based inference, which reformulates relevance estimation as a sequential decision process and decomposes multi-class prediction into a series of ordered binary judgments from higher to lower relevance tiers. For large language models, we design a step-wise reasoning procedure with pruning strategies and tier-specific reward functions. For the online BERT model, we replace the conventional classification head with multiple level-wise binary classifiers and distill the capabilities of large language models into the online model. Extensive offline industrial benchmark evaluations and online A/B experiments demonstrate that the proposed framework substantially improves relevance performance, reducing the online bad-case rate by 15.94\\%. Further analyses suggest that tier-wise modeling is effective for relevance estimation.",
+      "authors": [
+        "Zhi Jin",
+        "Xi Wang",
+        "Yunfei Li",
+        "Guojun Liu",
+        "Qingsong Hua",
+        "Wei Lin"
+      ],
+      "published": "2026-07-27T13:30:32Z",
+      "categories": [
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2607.24417v1"
+    },
+    {
+      "doc_id": "2408.04388v1",
+      "title": "MM-Forecast: A Multimodal Approach to Temporal Event Forecasting with Large Language Models",
+      "abstract": "We study an emerging and intriguing problem of multimodal temporal event forecasting with large language models. Compared to using text or graph modalities, the investigation of utilizing images for temporal event forecasting has not been fully explored, especially in the era of large language models (LLMs). To bridge this gap, we are particularly interested in two key questions of: 1) why images will help in temporal event forecasting, and 2) how to integrate images into the LLM-based forecasting framework. To answer these research questions, we propose to identify two essential functions that images play in the scenario of temporal event forecasting, i.e., highlighting and complementary. Then, we develop a novel framework, named MM-Forecast. It employs an Image Function Identification module to recognize these functions as verbal descriptions using multimodal large language models (MLLMs), and subsequently incorporates these function descriptions into LLM-based forecasting models. To evaluate our approach, we construct a new multimodal dataset, MidEast-TE-mm, by extending an existing event dataset MidEast-TE-mini with images. Empirical studies demonstrate that our MM-Forecast can correctly identify the image functions, and further more, incorporating these verbal function descriptions significantly improves the forecasting performance. The dataset, code, and prompts are available at https://github.com/LuminosityX/MM-Forecast.",
+      "authors": [
+        "Haoxuan Li",
+        "Zhengmao Yang",
+        "Yunshan Ma",
+        "Yi Bin",
+        "Yang Yang",
+        "Tat-Seng Chua"
+      ],
+      "published": "2024-08-08T11:44:57Z",
+      "categories": [
+        "cs.MM",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2408.04388v1"
+    },
+    {
+      "doc_id": "2411.07439v1",
+      "title": "Music Discovery Dialogue Generation Using Human Intent Analysis and Large Language Models",
+      "abstract": "A conversational music retrieval system can help users discover music that matches their preferences through dialogue. To achieve this, a conversational music retrieval system should seamlessly engage in multi-turn conversation by 1) understanding user queries and 2) responding with natural language and retrieved music. A straightforward solution would be a data-driven approach utilizing such conversation logs. However, few datasets are available for the research and are limited in terms of volume and quality. In this paper, we present a data generation framework for rich music discovery dialogue using a large language model (LLM) and user intents, system actions, and musical attributes. This is done by i) dialogue intent analysis using grounded theory, ii) generating attribute sequences via cascading database filtering, and iii) generating utterances using large language models. By applying this framework to the Million Song dataset, we create LP-MusicDialog, a Large Language Model based Pseudo Music Dialogue dataset, containing over 288k music conversations using more than 319k music items. Our evaluation shows that the synthetic dataset is competitive with an existing, small human dialogue dataset in terms of dialogue consistency, item relevance, and naturalness. Furthermore, using the dataset, we train a conversational music retrieval model and show promising results.",
+      "authors": [
+        "SeungHeon Doh",
+        "Keunwoo Choi",
+        "Daeyong Kwon",
+        "Taesu Kim",
+        "Juhan Nam"
+      ],
+      "published": "2024-11-11T23:40:45Z",
+      "categories": [
+        "cs.SD",
+        "cs.IR",
+        "eess.AS"
+      ],
+      "url": "http://arxiv.org/abs/2411.07439v1"
+    },
+    {
+      "doc_id": "2504.18413v1",
+      "title": "An Empirical Study of Evaluating Long-form Question Answering",
+      "abstract": "\\Ac{LFQA} aims to generate lengthy answers to complex questions. This scenario presents great flexibility as well as significant challenges for evaluation. Most evaluations rely on deterministic metrics that depend on string or n-gram matching, while the reliability of large language model-based evaluations for long-form answers remains relatively unexplored. We address this gap by conducting an in-depth study of long-form answer evaluation with the following research questions: (i) To what extent do existing automatic evaluation metrics serve as a substitute for human evaluations? (ii) What are the limitations of existing evaluation metrics compared to human evaluations? (iii) How can the effectiveness and robustness of existing evaluation methods be improved? We collect 5,236 factoid and non-factoid long-form answers generated by different large language models and conduct a human evaluation on 2,079 of them, focusing on correctness and informativeness. Subsequently, we investigated the performance of automatic evaluation metrics by evaluating these answers, analyzing the consistency between these metrics and human evaluations. We find that the style, length of the answers, and the category of questions can bias the automatic evaluation metrics. However, fine-grained evaluation helps mitigate this issue on some metrics. Our findings have important implications for the use of large language models for evaluating long-form question answering. All code and datasets are available at https://github.com/bugtig6351/lfqa_evaluation.",
+      "authors": [
+        "Ning Xian",
+        "Yixing Fan",
+        "Ruqing Zhang",
+        "Maarten de Rijke",
+        "Jiafeng Guo"
+      ],
+      "published": "2025-04-25T15:14:25Z",
+      "categories": [
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2504.18413v1"
+    },
+    {
+      "doc_id": "2310.04892v1",
+      "title": "Commercialized Generative AI: A Critical Study of the Feasibility and Ethics of Generating Native Advertising Using Large Language Models in Conversational Web Search",
+      "abstract": "How will generative AI pay for itself? Unless charging users for access, selling advertising is the only alternative. Especially in the multi-billion dollar web search market with ads as the main source of revenue, the introduction of a subscription model seems unlikely. The recent disruption of search by generative large language models could thus ultimately be accompanied by generated ads. Our concern is that the commercialization of generative AI in general and large language models in particular could lead to native advertising in the form of quite subtle brand or product placements. In web search, the evolution of search engine results pages (SERPs) from traditional lists of ``ten blue links'' (lists SERPs) to generated text with web page references (text SERPs) may further blur the line between advertising-based and organic search results, making it difficult for users to distinguish between the two, depending on how advertising is integrated and disclosed. To raise awareness of this potential development, we conduct a pilot study analyzing the capabilities of current large language models to blend ads with organic search results. Although the models still struggle to subtly frame ads in an unrelated context, their potential is evident when integrating ads into related topics which calls for further investigation.",
+      "authors": [
+        "Ines Zelch",
+        "Matthias Hagen",
+        "Martin Potthast"
+      ],
+      "published": "2023-10-07T18:29:33Z",
+      "categories": [
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2310.04892v1"
+    },
+    {
+      "doc_id": "2404.18043v3",
+      "title": "Utilizing Large Language Models for Information Extraction from Real Estate Transactions",
+      "abstract": "Real estate sales contracts contain crucial information for property transactions, but manual data extraction can be time-consuming and error-prone. This paper explores the application of large language models, specifically transformer-based architectures, for automated information extraction from real estate contracts. We discuss challenges, techniques, and future directions in leveraging these models to improve efficiency and accuracy in real estate contract analysis. We generated synthetic contracts using the real-world transaction dataset, thereby fine-tuning the large-language model and achieving significant metrics improvements and qualitative improvements in information retrieval and reasoning tasks.",
+      "authors": [
+        "Yu Zhao",
+        "Haoxiang Gao",
+        "Jinghan Cao",
+        "Shiqi Yang"
+      ],
+      "published": "2024-04-28T01:38:38Z",
+      "categories": [
+        "cs.CL",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "url": "http://arxiv.org/abs/2404.18043v3"
+    },
+    {
+      "doc_id": "2501.07250v1",
+      "title": "Large Language Models: New Opportunities for Access to Science",
+      "abstract": "The adaptation of Large Language Models like ChatGPT for information retrieval from scientific data, software and publications is offering new opportunities to simplify access to and understanding of science for persons from all levels of expertise. They can become tools to both enhance the usability of the open science environment we are building as well as help to provide systematic insight to a long-built corpus of scientific publications. The uptake of Retrieval Augmented Generation-enhanced chat applications in the construction of the open science environment of the KM3NeT neutrino detectors serves as a focus point to explore and exemplify prospects for the wider application of Large Language Models for our science.",
+      "authors": [
+        "Jutta Schnabel"
+      ],
+      "published": "2025-01-13T11:58:27Z",
+      "categories": [
+        "astro-ph.IM",
+        "cs.IR",
+        "physics.soc-ph"
+      ],
+      "url": "http://arxiv.org/abs/2501.07250v1"
+    },
+    {
+      "doc_id": "2410.19744v1",
+      "title": "Towards Next-Generation LLM-based Recommender Systems: A Survey and Beyond",
+      "abstract": "Large language models (LLMs) have not only revolutionized the field of natural language processing (NLP) but also have the potential to bring a paradigm shift in many other fields due to their remarkable abilities of language understanding, as well as impressive generalization capabilities and reasoning skills. As a result, recent studies have actively attempted to harness the power of LLMs to improve recommender systems, and it is imperative to thoroughly review the recent advances and challenges of LLM-based recommender systems. Unlike existing work, this survey does not merely analyze the classifications of LLM-based recommendation systems according to the technical framework of LLMs. Instead, it investigates how LLMs can better serve recommendation tasks from the perspective of the recommender system community, thus enhancing the integration of large language models into the research of recommender system and its practical application. In addition, the long-standing gap between academic research and industrial applications related to recommender systems has not been well discussed, especially in the era of large language models. In this review, we introduce a novel taxonomy that originates from the intrinsic essence of recommendation, delving into the application of large language model-based recommendation systems and their industrial implementation. Specifically, we propose a three-tier structure that more accurately reflects the developmental progression of recommendation systems from research to practical implementation, including representing and understanding, scheming and utilizing, and industrial deployment. Furthermore, we discuss critical challenges and opportunities in this emerging field. A more up-to-date version of the papers is maintained at: https://github.com/jindongli-Ai/Next-Generation-LLM-based-Recommender-Systems-Survey.",
+      "authors": [
+        "Qi Wang",
+        "Jindong Li",
+        "Shiqi Wang",
+        "Qianli Xing",
+        "Runliang Niu",
+        "He Kong",
+        "Rui Li",
+        "Guodong Long",
+        "Yi Chang",
+        "Chengqi Zhang"
+      ],
+      "published": "2024-10-10T08:22:04Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "url": "http://arxiv.org/abs/2410.19744v1"
+    },
+    {
+      "doc_id": "2307.00457v2",
+      "title": "GenRec: Large Language Model for Generative Recommendation",
+      "abstract": "In recent years, large language models (LLM) have emerged as powerful tools for diverse natural language processing tasks. However, their potential for recommender systems under the generative recommendation paradigm remains relatively unexplored. This paper presents an innovative approach to recommendation systems using large language models (LLMs) based on text data. In this paper, we present a novel LLM for generative recommendation (GenRec) that utilized the expressive power of LLM to directly generate the target item to recommend, rather than calculating ranking score for each candidate item one by one as in traditional discriminative recommendation. GenRec uses LLM's understanding ability to interpret context, learn user preferences, and generate relevant recommendation. Our proposed approach leverages the vast knowledge encoded in large language models to accomplish recommendation tasks. We first we formulate specialized prompts to enhance the ability of LLM to comprehend recommendation tasks. Subsequently, we use these prompts to fine-tune the LLaMA backbone LLM on a dataset of user-item interactions, represented by textual data, to capture user preferences and item characteristics. Our research underscores the potential of LLM-based generative recommendation in revolutionizing the domain of recommendation systems and offers a foundational framework for future explorations in this field. We conduct extensive experiments on benchmark datasets, and the experiments shows that our GenRec has significant better results on large dataset.",
+      "authors": [
+        "Jianchao Ji",
+        "Zelong Li",
+        "Shuyuan Xu",
+        "Wenyue Hua",
+        "Yingqiang Ge",
+        "Juntao Tan",
+        "Yongfeng Zhang"
+      ],
+      "published": "2023-07-02T02:37:07Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "url": "http://arxiv.org/abs/2307.00457v2"
+    },
+    {
+      "doc_id": "2411.11090v2",
+      "title": "ForPKG: A Framework for Constructing Forestry Policy Knowledge Graph and Application Analysis",
+      "abstract": "A policy knowledge graph can provide decision support for tasks such as project compliance, policy analysis, and intelligent question answering, and can also serve as an external knowledge base to assist the reasoning process of related large language models. Although there have been many related works on knowledge graphs, there is currently a lack of research on the construction methods of policy knowledge graphs. This paper, focusing on the forestry field, designs a complete policy knowledge graph construction framework, including: firstly, proposing a fine-grained forestry policy domain ontology; then, proposing an unsupervised policy information extraction method, and finally, constructing a complete forestry policy knowledge graph. The experimental results show that the proposed ontology has good expressiveness and extensibility, and the policy information extraction method proposed in this paper achieves better results than other unsupervised methods. Furthermore, by analyzing the application of the knowledge graph in the retrieval-augmented-generation task of the large language models, the practical application value of the knowledge graph in the era of large language models is confirmed. The knowledge graph resource will be released on an open-source platform and can serve as the basic knowledge base for forestry policy-related intelligent systems. It can also be used for academic research. In addition, this study can provide reference and guidance for the construction of policy knowledge graphs in other fields. Our data is provided on Github https://github.com/luozhongze/ForPKG.",
+      "authors": [
+        "Jingyun Sun",
+        "Zhongze Luo"
+      ],
+      "published": "2024-11-17T14:45:52Z",
+      "categories": [
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2411.11090v2"
+    },
+    {
+      "doc_id": "2503.12225v2",
+      "title": "Interpretation Gaps in LLM-Assisted Comprehension of Privacy Documents",
+      "abstract": "This article explores the gaps that can manifest when using a large language model (LLM) to obtain simplified interpretations of data practices from a complex privacy policy. We exemplify these gaps to showcase issues in accuracy, completeness, clarity and representation, while advocating for continued research to realize an LLM's true potential in revolutionizing privacy management through personal assistants and automated compliance checking.",
+      "authors": [
+        "Rinku Dewri"
+      ],
+      "published": "2025-03-15T18:43:13Z",
+      "categories": [
+        "cs.CL",
+        "cs.CY",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2503.12225v2"
+    },
+    {
+      "doc_id": "2508.17340v1",
+      "title": "Capturing Legal Reasoning Paths from Facts to Law in Court Judgments using Knowledge Graphs",
+      "abstract": "Court judgments reveal how legal rules have been interpreted and applied to facts, providing a foundation for understanding structured legal reasoning. However, existing automated approaches for capturing legal reasoning, including large language models, often fail to identify the relevant legal context, do not accurately trace how facts relate to legal norms, and may misrepresent the layered structure of judicial reasoning. These limitations hinder the ability to capture how courts apply the law to facts in practice. In this paper, we address these challenges by constructing a legal knowledge graph from 648 Japanese administrative court decisions. Our method extracts components of legal reasoning using prompt-based large language models, normalizes references to legal provisions, and links facts, norms, and legal applications through an ontology of legal inference. The resulting graph captures the full structure of legal reasoning as it appears in real court decisions, making implicit reasoning explicit and machine-readable. We evaluate our system using expert annotated data, and find that it achieves more accurate retrieval of relevant legal provisions from facts than large language model baselines and retrieval-augmented methods.",
+      "authors": [
+        "Ryoma Kondo",
+        "Riona Matsuoka",
+        "Takahiro Yoshida",
+        "Kazuyuki Yamasawa",
+        "Ryohei Hisano"
+      ],
+      "published": "2025-08-24T12:51:40Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.DB",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2508.17340v1"
+    },
+    {
+      "doc_id": "2403.18405v3",
+      "title": "Leveraging Large Language Models for Relevance Judgments in Legal Case Retrieval",
+      "abstract": "Determining which legal cases are relevant to a given query involves navigating lengthy texts and applying nuanced legal reasoning. Traditionally, this task has demanded significant time and domain expertise to identify key Legal Facts and reach sound juridical conclusions. In addition, existing data with legal case similarities often lack interpretability, making it difficult to understand the rationale behind relevance judgments. With the growing capabilities of large language models (LLMs), researchers have begun investigating their potential in this domain. Nonetheless, the method of employing a general large language model for reliable relevance judgments in legal case retrieval remains largely unexplored. To address this gap in research, we propose a novel few-shot approach where LLMs assist in generating expert-aligned interpretable relevance judgments. The proposed approach decomposes the judgment process into several stages, mimicking the workflow of human annotators and allowing for the flexible incorporation of expert reasoning to improve the accuracy of relevance judgments. Importantly, it also ensures interpretable data labeling, providing transparency and clarity in the relevance assessment process. Through a comparison of relevance judgments made by LLMs and human experts, we empirically demonstrate that the proposed approach can yield reliable and valid relevance assessments. Furthermore, we demonstrate that with minimal expert supervision, our approach enables a large language model to acquire case analysis expertise and subsequently transfers this ability to a smaller model via annotation-based knowledge distillation.",
+      "authors": [
+        "Shengjie Ma",
+        "Qi Chu",
+        "Jiaxin Mao",
+        "Xuhui Jiang",
+        "Haozhe Duan",
+        "Chong Chen"
+      ],
+      "published": "2024-03-27T09:46:56Z",
+      "categories": [
+        "cs.AI",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2403.18405v3"
+    },
+    {
+      "doc_id": "2306.02549v1",
+      "title": "Evaluation of AI Chatbots for Patient-Specific EHR Questions",
+      "abstract": "This paper investigates the use of artificial intelligence chatbots for patient-specific question answering (QA) from clinical notes using several large language model (LLM) based systems: ChatGPT (versions 3.5 and 4), Google Bard, and Claude. We evaluate the accuracy, relevance, comprehensiveness, and coherence of the answers generated by each model using a 5-point Likert scale on a set of patient-specific questions.",
+      "authors": [
+        "Alaleh Hamidi",
+        "Kirk Roberts"
+      ],
+      "published": "2023-06-05T02:52:54Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2306.02549v1"
+    },
+    {
+      "doc_id": "2501.06277v1",
+      "title": "Environmental large language model Evaluation (ELLE) dataset: A Benchmark for Evaluating Generative AI applications in Eco-environment Domain",
+      "abstract": "Generative AI holds significant potential for ecological and environmental applications such as monitoring, data analysis, education, and policy support. However, its effectiveness is limited by the lack of a unified evaluation framework. To address this, we present the Environmental Large Language model Evaluation (ELLE) question answer (QA) dataset, the first benchmark designed to assess large language models and their applications in ecological and environmental sciences. The ELLE dataset includes 1,130 question answer pairs across 16 environmental topics, categorized by domain, difficulty, and type. This comprehensive dataset standardizes performance assessments in these fields, enabling consistent and objective comparisons of generative AI performance. By providing a dedicated evaluation tool, ELLE dataset promotes the development and application of generative AI technologies for sustainable environmental outcomes. The dataset and code are available at https://elle.ceeai.net/ and https://github.com/CEEAI/elle.",
+      "authors": [
+        "Jing Guo",
+        "Nan Li",
+        "Ming Xu"
+      ],
+      "published": "2025-01-10T12:48:29Z",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2501.06277v1"
+    },
+    {
+      "doc_id": "2305.13102v1",
+      "title": "Observations on LLMs for Telecom Domain: Capabilities and Limitations",
+      "abstract": "The landscape for building conversational interfaces (chatbots) has witnessed a paradigm shift with recent developments in generative Artificial Intelligence (AI) based Large Language Models (LLMs), such as ChatGPT by OpenAI (GPT3.5 and GPT4), Google's Bard, Large Language Model Meta AI (LLaMA), among others. In this paper, we analyze capabilities and limitations of incorporating such models in conversational interfaces for the telecommunication domain, specifically for enterprise wireless products and services. Using Cradlepoint's publicly available data for our experiments, we present a comparative analysis of the responses from such models for multiple use-cases including domain adaptation for terminology and product taxonomy, context continuity, robustness to input perturbations and errors. We believe this evaluation would provide useful insights to data scientists engaged in building customized conversational interfaces for domain-specific requirements.",
+      "authors": [
+        "Sumit Soman",
+        "Ranjani H G"
+      ],
+      "published": "2023-05-22T15:04:16Z",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.CL",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "url": "http://arxiv.org/abs/2305.13102v1"
+    },
+    {
+      "doc_id": "2401.01711v1",
+      "title": "Evaluating Large Language Models in Semantic Parsing for Conversational Question Answering over Knowledge Graphs",
+      "abstract": "Conversational question answering systems often rely on semantic parsing to enable interactive information retrieval, which involves the generation of structured database queries from a natural language input. For information-seeking conversations about facts stored within a knowledge graph, dialogue utterances are transformed into graph queries in a process that is called knowledge-based conversational question answering. This paper evaluates the performance of large language models that have not been explicitly pre-trained on this task. Through a series of experiments on an extensive benchmark dataset, we compare models of varying sizes with different prompting techniques and identify common issue types in the generated output. Our results demonstrate that large language models are capable of generating graph queries from dialogues, with significant improvements achievable through few-shot prompting and fine-tuning techniques, especially for smaller models that exhibit lower zero-shot performance.",
+      "authors": [
+        "Phillip Schneider",
+        "Manuel Klettner",
+        "Kristiina Jokinen",
+        "Elena Simperl",
+        "Florian Matthes"
+      ],
+      "published": "2024-01-03T12:28:33Z",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2401.01711v1"
+    },
+    {
+      "doc_id": "2508.17258v1",
+      "title": "Are You Sure You're Positive? Consolidating Chain-of-Thought Agents with Uncertainty Quantification for Aspect-Category Sentiment Analysis",
+      "abstract": "Aspect-category sentiment analysis provides granular insights by identifying specific themes within product reviews that are associated with particular opinions. Supervised learning approaches dominate the field. However, data is scarce and expensive to annotate for new domains. We argue that leveraging large language models in a zero-shot setting is beneficial where the time and resources required for dataset annotation are limited. Furthermore, annotation bias may lead to strong results using supervised methods but transfer poorly to new domains in contexts that lack annotations and demand reproducibility. In our work, we propose novel techniques that combine multiple chain-of-thought agents by leveraging large language models' token-level uncertainty scores. We experiment with the 3B and 70B+ parameter size variants of Llama and Qwen models, demonstrating how these approaches can fulfil practical needs and opening a discussion on how to gauge accuracy in label-scarce conditions.",
+      "authors": [
+        "Filippos Ventirozos",
+        "Peter Appleby",
+        "Matthew Shardlow"
+      ],
+      "published": "2025-08-24T08:51:16Z",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2508.17258v1"
+    },
+    {
+      "doc_id": "2512.21257v2",
+      "title": "ReaSeq: Unleashing World Knowledge via Reasoning for Sequential Modeling",
+      "abstract": "Industrial recommender systems face two fundamental limitations under the log-driven paradigm: (1) knowledge poverty in ID-based item representations that causes brittle interest modeling under data sparsity, and (2) systemic blindness to beyond-log user interests that constrains model performance within platform boundaries. These limitations stem from an over-reliance on shallow interaction statistics and close-looped feedback while neglecting the rich world knowledge about product semantics and cross-domain behavioral patterns that Large Language Models have learned from vast corpora. To address these challenges, we introduce ReaSeq, a reasoning-enhanced framework that leverages world knowledge in Large Language Models to address both limitations through explicit and implicit reasoning. Specifically, ReaSeq employs explicit Chain-of-Thought reasoning via multi-agent collaboration to distill structured product knowledge into semantically enriched item representations, and latent reasoning via Diffusion Large Language Models to infer plausible beyond-log behaviors. Deployed on Taobao's ranking system serving hundreds of millions of users, ReaSeq achieves substantial gains: >6.0% in IPV and CTR, >2.9% in Orders, and >2.5% in GMV, validating the effectiveness of world-knowledge-enhanced reasoning over purely log-driven approaches.",
+      "authors": [
+        "Jiakai Tang",
+        "Chuan Wang",
+        "Gaoming Yang",
+        "Han Wu",
+        "Jiahao Yu",
+        "Jian Wu",
+        "Jianwu Hu",
+        "Junjun Zheng",
+        "Longbin Li",
+        "Shuwen Xiao",
+        "Xiangheng Kong",
+        "Yeqiu Yang",
+        "Yuning Jiang",
+        "Ahjol Nurlanbek",
+        "Binbin Cao",
+        "Bo Zheng",
+        "Fangmei Zhu",
+        "Gaoming Zhou",
+        "Huimin Yi",
+        "Huiping Chu",
+        "Jin Huang",
+        "Jinzhe Shan",
+        "Kenan Cui",
+        "Longbin Li",
+        "Silu Zhou",
+        "Wen Chen",
+        "Xia Ming",
+        "Xiang Gao",
+        "Xin Yao",
+        "Xingyu Wen",
+        "Yan Zhang",
+        "Yiwen Hu",
+        "Yulin Wang",
+        "Ziheng Bao",
+        "Zongyuan Wu"
+      ],
+      "published": "2025-12-24T16:06:20Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "url": "http://arxiv.org/abs/2512.21257v2"
+    },
+    {
+      "doc_id": "2508.06103v1",
+      "title": "Few-Shot Prompting for Extractive Quranic QA with Instruction-Tuned LLMs",
+      "abstract": "This paper presents two effective approaches for Extractive Question Answering (QA) on the Quran. It addresses challenges related to complex language, unique terminology, and deep meaning in the text. The second uses few-shot prompting with instruction-tuned large language models such as Gemini and DeepSeek. A specialized Arabic prompt framework is developed for span extraction. A strong post-processing system integrates subword alignment, overlap suppression, and semantic filtering. This improves precision and reduces hallucinations. Evaluations show that large language models with Arabic instructions outperform traditional fine-tuned models. The best configuration achieves a pAP10 score of 0.637. The results confirm that prompt-based instruction tuning is effective for low-resource, semantically rich QA tasks.",
+      "authors": [
+        "Mohamed Basem",
+        "Islam Oshallah",
+        "Ali Hamdi",
+        "Ammar Mohammed"
+      ],
+      "published": "2025-08-08T08:02:59Z",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2508.06103v1"
+    },
+    {
+      "doc_id": "2305.11527v4",
+      "title": "InstructIE: A Bilingual Instruction-based Information Extraction Dataset",
+      "abstract": "Large language models can perform well on general natural language tasks, but their effectiveness is still suboptimal for information extraction (IE). Recent works indicate that the main reason lies in the lack of extensive data on IE instructions. Note that the existing datasets on IE instructions not only have limited coverage but also involve high construction costs. To address this issue, we introduce InstructIE, a bilingual instruction-based IE dataset, which covers 12 diverse domains. We propose KG2Instruction, a framework specifically for the automatic generation of such datasets. Additionally, we manually annotate the test set. Experimental results demonstrate that large language models trained with InstructIE can not only obtain better IE capabilities but also enhance zero-shot performance compared with baselines.",
+      "authors": [
+        "Honghao Gui",
+        "Shuofei Qiao",
+        "Jintian Zhang",
+        "Hongbin Ye",
+        "Mengshu Sun",
+        "Lei Liang",
+        "Jeff Z. Pan",
+        "Huajun Chen",
+        "Ningyu Zhang"
+      ],
+      "published": "2023-05-19T08:51:11Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "url": "http://arxiv.org/abs/2305.11527v4"
+    },
+    {
+      "doc_id": "2402.05318v1",
+      "title": "Navigating the Knowledge Sea: Planet-scale answer retrieval using LLMs",
+      "abstract": "Information retrieval is a rapidly evolving field of information retrieval, which is characterized by a continuous refinement of techniques and technologies, from basic hyperlink-based navigation to sophisticated algorithm-driven search engines. This paper aims to provide a comprehensive overview of the evolution of Information Retrieval Technology, with a particular focus on the role of Large Language Models (LLMs) in bridging the gap between traditional search methods and the emerging paradigm of answer retrieval. The integration of LLMs in the realms of response retrieval and indexing signifies a paradigm shift in how users interact with information systems. This paradigm shift is driven by the integration of large language models (LLMs) like GPT-4, which are capable of understanding and generating human-like text, thus enabling them to provide more direct and contextually relevant answers to user queries. Through this exploration, we seek to illuminate the technological milestones that have shaped this journey and the potential future directions in this rapidly changing field.",
+      "authors": [
+        "Dipankar Sarkar"
+      ],
+      "published": "2024-02-07T23:39:40Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "url": "http://arxiv.org/abs/2402.05318v1"
+    },
+    {
+      "doc_id": "2403.00806v1",
+      "title": "Enhanced User Interaction in Operating Systems through Machine Learning Language Models",
+      "abstract": "With the large language model showing human-like logical reasoning and understanding ability, whether agents based on the large language model can simulate the interaction behavior of real users, so as to build a reliable virtual recommendation A/B test scene to help the application of recommendation research is an urgent, important and economic value problem. The combination of interaction design and machine learning can provide a more efficient and personalized user experience for products and services. This personalized service can meet the specific needs of users and improve user satisfaction and loyalty. Second, the interactive system can understand the user's views and needs for the product by providing a good user interface and interactive experience, and then use machine learning algorithms to improve and optimize the product. This iterative optimization process can continuously improve the quality and performance of the product to meet the changing needs of users. At the same time, designers need to consider how these algorithms and tools can be combined with interactive systems to provide a good user experience. This paper explores the potential applications of large language models, machine learning and interaction design for user interaction in recommendation systems and operating systems. By integrating these technologies, more intelligent and personalized services can be provided to meet user needs and promote continuous improvement and optimization of products. This is of great value for both recommendation research and user experience applications.",
+      "authors": [
+        "Chenwei Zhang",
+        "Wenran Lu",
+        "Chunhe Ni",
+        "Hongbo Wang",
+        "Jiang Wu"
+      ],
+      "published": "2024-02-24T12:17:06Z",
+      "categories": [
+        "cs.IR",
+        "cs.CE",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "url": "http://arxiv.org/abs/2403.00806v1"
+    },
+    {
+      "doc_id": "2405.15787v1",
+      "title": "Extracting chemical food safety hazards from the scientific literature automatically using large language models",
+      "abstract": "The number of scientific articles published in the domain of food safety has consistently been increasing over the last few decades. It has therefore become unfeasible for food safety experts to read all relevant literature related to food safety and the occurrence of hazards in the food chain. However, it is important that food safety experts are aware of the newest findings and can access this information in an easy and concise way. In this study, an approach is presented to automate the extraction of chemical hazards from the scientific literature through large language models. The large language model was used out-of-the-box and applied on scientific abstracts; no extra training of the models or a large computing cluster was required. Three different styles of prompting the model were tested to assess which was the most optimal for the task at hand. The prompts were optimized with two validation foods (leafy greens and shellfish) and the final performance of the best prompt was evaluated using three test foods (dairy, maize and salmon). The specific wording of the prompt was found to have a considerable effect on the results. A prompt breaking the task down into smaller steps performed best overall. This prompt reached an average accuracy of 93% and contained many chemical contaminants already included in food monitoring programs, validating the successful retrieval of relevant hazards for the food safety domain. The results showcase how valuable large language models can be for the task of automatic information extraction from the scientific literature.",
+      "authors": [
+        "Neris Özen",
+        "Wenjuan Mu",
+        "Esther D. van Asselt",
+        "Leonieke M. van den Bulk"
+      ],
+      "published": "2024-05-01T08:02:10Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "url": "http://arxiv.org/abs/2405.15787v1"
+    },
+    {
+      "doc_id": "2607.24793v1",
+      "title": "Retrieval, not hallucinations, will be the limiting factor for LLM-based clinical AI tools",
+      "abstract": "Discussions around large language model (LLM) errors in clinical artificial intelligence (AI) generally center around precision errors like hallucinations. This perspective, targeting both clinicians and AI researchers, seeks to shift that discussion to recall errors, particularly in retrieval of patient-level data needed for many clinical AI tools. The perspective outlines types of errors and mitigation strategies, describes research directions in LLMs and retrieval, and provides an overview of retrieval evaluation.",
+      "authors": [
+        "Kirk Roberts",
+        "Steven Bedrick",
+        "Kurt Miller",
+        "William R. Hersh",
+        "Hongfang Liu"
+      ],
+      "published": "2026-06-29T02:31:16Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "url": "http://arxiv.org/abs/2607.24793v1"
+    },
+    {
+      "doc_id": "2310.08319v1",
+      "title": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+      "abstract": "The effectiveness of multi-stage text retrieval has been solidly demonstrated since before the era of pre-trained language models. However, most existing studies utilize models that predate recent advances in large language models (LLMs). This study seeks to explore potential improvements that state-of-the-art LLMs can bring. We conduct a comprehensive study, fine-tuning the latest LLaMA model both as a dense retriever (RepLLaMA) and as a pointwise reranker (RankLLaMA) for both passage retrieval and document retrieval using the MS MARCO datasets. Our findings demonstrate that the effectiveness of large language models indeed surpasses that of smaller models. Additionally, since LLMs can inherently handle longer contexts, they can represent entire documents holistically, obviating the need for traditional segmenting and pooling strategies. Furthermore, evaluations on BEIR demonstrate that our RepLLaMA-RankLLaMA pipeline exhibits strong zero-shot effectiveness. Model checkpoints from this study are available on HuggingFace.",
+      "authors": [
+        "Xueguang Ma",
+        "Liang Wang",
+        "Nan Yang",
+        "Furu Wei",
+        "Jimmy Lin"
+      ],
+      "published": "2023-10-12T13:32:35Z",
+      "categories": [
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2310.08319v1"
+    },
+    {
+      "doc_id": "2406.19760v1",
+      "title": "Learning Interpretable Legal Case Retrieval via Knowledge-Guided Case Reformulation",
+      "abstract": "Legal case retrieval for sourcing similar cases is critical in upholding judicial fairness. Different from general web search, legal case retrieval involves processing lengthy, complex, and highly specialized legal documents. Existing methods in this domain often overlook the incorporation of legal expert knowledge, which is crucial for accurately understanding and modeling legal cases, leading to unsatisfactory retrieval performance. This paper introduces KELLER, a legal knowledge-guided case reformulation approach based on large language models (LLMs) for effective and interpretable legal case retrieval. By incorporating professional legal knowledge about crimes and law articles, we enable large language models to accurately reformulate the original legal case into concise sub-facts of crimes, which contain the essential information of the case. Extensive experiments on two legal case retrieval benchmarks demonstrate superior retrieval performance and robustness on complex legal case queries of KELLER over existing methods.",
+      "authors": [
+        "Chenlong Deng",
+        "Kelong Mao",
+        "Zhicheng Dou"
+      ],
+      "published": "2024-06-28T08:59:45Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "url": "http://arxiv.org/abs/2406.19760v1"
+    },
+    {
+      "doc_id": "2407.02028v1",
+      "title": "Why does in-context learning fail sometimes? Evaluating in-context learning on open and closed questions",
+      "abstract": "We measure the performance of in-context learning as a function of task novelty and difficulty for open and closed questions. For that purpose, we created a novel benchmark consisting of hard scientific questions, each paired with a context of various relevancy. We show that counter-intuitively, a context that is more aligned with the topic does not always help more than a less relevant context. This effect is especially visible for open questions and questions of high difficulty or novelty. This result reveals a fundamental difference between the treatment of close-form and open-form questions by large-language models and shows a need for a more robust evaluation of in-context learning on the variety of different types of questions. It also poses a new question of how to optimally select a context for large language models, especially in the context of Retrieval Augmented Generation (RAG) systems. Our results suggest that the answer to this question can be highly application-dependent and might be contingent on factors including the format of the question, the perceived difficulty level of the questions, and the novelty or popularity of the information we seek.",
+      "authors": [
+        "Xiang Li",
+        "Haoran Tang",
+        "Siyu Chen",
+        "Ziwei Wang",
+        "Ryan Chen",
+        "Marcin Abram"
+      ],
+      "published": "2024-07-02T07:52:30Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "url": "http://arxiv.org/abs/2407.02028v1"
+    },
+    {
+      "doc_id": "2408.08564v1",
+      "title": "Collaborative Cross-modal Fusion with Large Language Model for Recommendation",
+      "abstract": "Despite the success of conventional collaborative filtering (CF) approaches for recommendation systems, they exhibit limitations in leveraging semantic knowledge within the textual attributes of users and items. Recent focus on the application of large language models for recommendation (LLM4Rec) has highlighted their capability for effective semantic knowledge capture. However, these methods often overlook the collaborative signals in user behaviors. Some simply instruct-tune a language model, while others directly inject the embeddings of a CF-based model, lacking a synergistic fusion of different modalities. To address these issues, we propose a framework of Collaborative Cross-modal Fusion with Large Language Models, termed CCF-LLM, for recommendation. In this framework, we translate the user-item interactions into a hybrid prompt to encode both semantic knowledge and collaborative signals, and then employ an attentive cross-modal fusion strategy to effectively fuse latent embeddings of both modalities. Extensive experiments demonstrate that CCF-LLM outperforms existing methods by effectively utilizing semantic and collaborative signals in the LLM4Rec context.",
+      "authors": [
+        "Zhongzhou Liu",
+        "Hao Zhang",
+        "Kuicai Dong",
+        "Yuan Fang"
+      ],
+      "published": "2024-08-16T06:54:10Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "url": "http://arxiv.org/abs/2408.08564v1"
+    },
+    {
+      "doc_id": "2407.15291v2",
+      "title": "Evidence-Based Temporal Fact Verification",
+      "abstract": "Automated fact verification plays an essential role in fostering trust in the digital space. Despite the growing interest, the verification of temporal facts has not received much attention in the community. Temporal fact verification brings new challenges where cues of the temporal information need to be extracted and temporal reasoning involving various temporal aspects of the text must be applied. In this work, we propose an end-to-end solution for temporal fact verification that considers the temporal information in claims to obtain relevant evidence sentences and harness the power of large language model for temporal reasoning. Recognizing that temporal facts often involve events, we model these events in the claim and evidence sentences. We curate two temporal fact datasets to learn time-sensitive representations that encapsulate not only the semantic relationships among the events, but also their chronological proximity. This allows us to retrieve the top-k relevant evidence sentences and provide the context for a large language model to perform temporal reasoning and outputs whether a claim is supported or refuted by the retrieved evidence sentences. Experiment results demonstrate that the proposed approach significantly enhances the accuracy of temporal claim verification, thereby advancing current state-of-the-art in automated fact verification.",
+      "authors": [
+        "Anab Maulana Barik",
+        "Wynne Hsu",
+        "Mong Li Lee"
+      ],
+      "published": "2024-07-21T23:13:05Z",
+      "categories": [
+        "cs.IR"
+      ],
+      "url": "http://arxiv.org/abs/2407.15291v2"
+    },
+    {
+      "doc_id": "2605.26400v1",
+      "title": "Plans for Evaluating Structured Generative Search Summaries",
+      "abstract": "We propose a framework for evaluating structured generative search summaries that are placed atop organic web search results. A structured summary, generated by a large language model, typically consists of an overview, several sections with section titles, and a list of source documents that are cited within the summary. We then describe our plans for implementing and evaluating the framework.",
+      "authors": [
+        "Tetsuya Sakai",
+        "Jina Lee",
+        "Hanpei Fang",
+        "Young-In Song"
+      ],
+      "published": "2026-05-26T00:08:21Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "url": "http://arxiv.org/abs/2605.26400v1"
+    },
+    {
+      "doc_id": "2608.00549v1",
+      "title": "A Context-Aware Cultural Heritage Guide Powered by LLMs",
+      "abstract": "We present an extension of Triangolazioni (a Cultural Heritage webapp) to enrich curated content with context-dependent, external information provided by Large Language Models (LLMs) within a loosely-coupled architecture agnostic to the LLM. The system supports context-dependent information search and presentation within an architecture agnostic to the exploited LLM.",
+      "authors": [
+        "Liliana Ardissono",
+        "Fabio Ferrero",
+        "Angelo Geninatti Cossatin",
+        "Claudio Mattutino",
+        "Noemi Mauro"
+      ],
+      "published": "2026-08-01T09:05:28Z",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "url": "http://arxiv.org/abs/2608.00549v1"
+    },
+    {
+      "doc_id": "2210.05145v1",
+      "title": "Retrieval Augmentation for T5 Re-ranker using External Sources",
+      "abstract": "Retrieval augmentation has shown promising improvements in different tasks. However, whether such augmentation can assist a large language model based re-ranker remains unclear. We investigate how to augment T5-based re-rankers using high-quality information retrieved from two external corpora -- a commercial web search engine and Wikipedia. We empirically demonstrate how retrieval augmentation can substantially improve the effectiveness of T5-based re-rankers for both in-domain and zero-shot out-of-domain re-ranking tasks.",
+      "authors": [
+        "Kai Hui",
+        "Tao Chen",
+        "Zhen Qin",
+        "Honglei Zhuang",
+        "Fernando Diaz",
+        "Mike Bendersky",
+        "Don Metzler"
+      ],
+      "published": "2022-10-11T04:54:19Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "url": "http://arxiv.org/abs/2210.05145v1"
+    }
+  ]
+}

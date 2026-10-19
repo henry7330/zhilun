@@ -1,0 +1,97 @@
+# 织论 Zhilun —— 基于 LangGraph 的多智能体 AI 论文辅助系统
+#
+# 本文件既是**打包配置**，也是**测试配置**。
+#
+#   pip install -e ".[dev,ui]"    # 开发安装（含 UI）
+#   python -m pytest              # 跑全部测试
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zhilun"
+version = "0.1.0"
+description = "织论 · 基于 LangGraph 的多智能体 AI 论文辅助系统"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "洪睿", email = "342192575+henry7330@users.noreply.github.com" }]
+keywords = ["langgraph", "multi-agent", "llm", "thesis", "academic-writing"]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+# ── 运行时依赖（按真实 import 扫描得出，不多不少）──
+dependencies = [
+    "langgraph>=1.2",          # 三处编排：主 Agent / 阶段图 / 能力流水线
+    "rank-bm25>=0.2",          # B1 文献检索（词面信号）
+    "numpy>=1.26",             # 统计与向量运算
+    "scipy>=1.11",             # C2 配对检验 / 效应量
+    "httpx>=0.27",             # 模型接入（不引入 openai SDK）
+    "python-dotenv>=1",        # 读 .env
+]
+
+[project.optional-dependencies]
+# 稠密检索（会拉入不小的模型，默认不装）
+dense = ["model2vec>=0.10"]
+# 解析 PDF 版查重/AI 报告
+pdf = ["pypdf>=5"]
+# 本地 Web 交互页
+ui = ["streamlit>=1.36"]
+# 开发
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+zhilun = "copilot.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/henry7330/zhilun"
+Repository = "https://github.com/henry7330/zhilun"
+Issues = "https://github.com/henry7330/zhilun/issues"
+
+# ── 打包：包在 src/copilot（项目名 zhilun，模块名 copilot）──
+[tool.hatch.build.targets.wheel]
+packages = ["src/copilot"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "docs", "README.md", "LICENSE"]
+
+# ── 测试：一个 src 根，测试仍按阶段分散（保留学习用的层级结构）──
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = [
+    "00-core/tests",
+    "01-topic/tests",
+    "02-literature/tests",
+    "03-research/tests",
+    "04-writing/tests",
+    "05-format/tests",
+    "05-format/e1-format/tests",
+    "05-format/e1-hygiene/tests",
+    "05-format/e2-consistency/tests",
+    "05-format/e3-export/tests",
+    "06-revise/tests",
+    "06-revise/f1-locate/tests",
+    "06-revise/f2-rewrite/tests",
+]
+addopts = "-q"
+
+# ── 代码风格 ──
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# 只门禁「必然是真 bug」的规则：语法级错误、未定义名、断言误用。
+#
+# 为什么不全开：全量会报 100+ 条导入排序 / 未使用导入 / 旧式 typing 用法，
+# 而 `ruff --fix` 会**破坏再导出模块**（实测把 `ReportParseError` 从
+# `checklist.py` 的 import 里删掉，导致下游 ImportError）。
+# 这类规则要逐个文件人工过，不适合放进门禁。
+#
+# 以后要扩大门禁，先对一个子目录跑 `ruff check --fix` 并验证测试。
+select = ["E9", "F63", "F7", "F82"]
+ignore = ["E501"]

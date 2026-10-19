@@ -1,0 +1,7 @@
+# 运行时依赖（等价于 pyproject 的 dependencies，避免重复维护）
+#
+#   pip install -r requirements.txt    # 只要跑得起来
+#   pip install -r requirements-dev.txt # 开发（含测试、ruff、Streamlit）
+#
+# 推荐直接：pip install -e .[dev]
+-e .

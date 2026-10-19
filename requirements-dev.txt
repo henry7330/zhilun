@@ -1,0 +1,5 @@
+# 开发依赖：测试 + 代码风格 + 本地交互页
+#
+#   pip install -r requirements-dev.txt
+#   python -m pytest
+-e .[dev,ui]

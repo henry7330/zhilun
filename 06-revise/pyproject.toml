@@ -1,0 +1,43 @@
+[project]
+name = "copilot-revise"
+version = "0.2.0"
+description = "F 阶段 · 降重降AI：按外部报告定位问题片段 → 一次改写同时满足两个目标"
+requires-python = ">=3.11"
+readme = "README.md"
+
+# 本阶段新增依赖只有模型接入（httpx）。
+# 其余全部复用共享层：切分 / 保真校验 / 重合度量 / 风格诊断。
+dependencies = [
+    "pydantic>=2",
+    "orjson>=3",
+    "python-dotenv>=1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+# 接模型改写（任意 OpenAI 兼容端点）
+llm = ["httpx>=0.27"]
+# PDF 版查重/AI 报告需要
+reports-pdf = ["pypdf>=5"]
+
+# ── 说明 ──
+# 打包由仓库根的 pyproject.toml 统一负责（单一 src 布局）。
+# 本文件只提供「在本目录下单独跑测试」的配置。
+
+[tool.pytest.ini_options]
+# 源码统一在仓库根的 src/ 下（单一布局），本文件只负责测试配置。
+#
+# 本阶段的节点实现位于：
+#   src/copilot/revise/                阶段入口（F1/F2 的编排 + 合并改写策略）
+#   src/copilot/quality/report_parse/  F1 报告解析定位
+#   src/copilot/quality/rewrite/       F2 的改写原语
+#   src/copilot/quality/deai/          F2 的降AI 原语
+#
+# ⚠️ 新增节点时**必须同步 testpaths**。
+pythonpath = ["../../src"]
+testpaths = [
+    "tests",
+    "f1-locate/tests",
+    "f2-rewrite/tests",
+]
+addopts = "-q"

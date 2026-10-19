@@ -1,0 +1,21 @@
+{
+  "name": "通用本科毕业论文",
+  "description": "内置模板，用于演示与兜底。真实使用时请按学校下发的格式要求替换本文件。",
+  "required_sections": [
+    "摘要",
+    "Abstract",
+    "绪论",
+    "文献综述",
+    "研究方法",
+    "实验与分析",
+    "结论",
+    "参考文献",
+    "致谢"
+  ],
+  "section_order_strict": true,
+  "reference_style": "gbt7714",
+  "min_body_words": 8000,
+  "max_authors_before_etal": 3,
+  "max_heading_level": 3,
+  "require_continuous_figure_numbering": true
+}

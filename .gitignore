@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+build/
+dist/
+.venv/
+venv/
+env/
+
+# 环境与密钥（.env.example 必须保留）
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# 测试与覆盖率
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# 演示/评测生成物（重新跑就会再生成）
+reports/
+exports/
+!docs/evidence/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# 临时文件
+*.zip
+*.log
+_tmp_*
