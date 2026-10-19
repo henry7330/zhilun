@@ -150,7 +150,35 @@ def _run_stage(stage: str, draft: str, report: str, requirement: str):
     return run_topic(title="（未命名）")
 
 
+def _prepare_streams() -> None:
+    """让输出在**非 tty**（CI / 管道 / 重定向）下也不会因编码崩掉。
+
+    实测：GitHub Actions 的 Windows runner 把 stdout 当管道，Python 用
+    ``locale.getpreferredencoding()`` = **cp1252**，打印中文直接
+    ``UnicodeEncodeError`` —— 演示命令因此在 CI 上失败（本地终端不复现，
+    因为 Windows 控制台走 UTF-16 API）。
+
+    处理方式：
+    - **非 tty**（管道 / 重定向）→ 切 UTF-8，日志里中文可读；
+    - **tty**（真实终端）→ 保持原编码，避免中文控制台变乱码；
+    - 两种情况都加 ``errors="replace"``，保证任何环境都不会因一个字符崩掉。
+    """
+    for name in ("stdout", "stderr"):
+        stream = getattr(sys, name, None)
+        reconfigure = getattr(stream, "reconfigure", None)
+        if reconfigure is None:
+            continue
+        try:
+            if stream.isatty():
+                reconfigure(errors="replace")
+            else:
+                reconfigure(encoding="utf-8", errors="replace")
+        except (OSError, ValueError):
+            pass
+
+
 def main(argv: list[str] | None = None) -> int:
+    _prepare_streams()
     ap = argparse.ArgumentParser(
         prog="zhilun",
         description="织论 Zhilun —— 基于 LangGraph 的多智能体 AI 论文辅助系统",
