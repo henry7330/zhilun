@@ -124,7 +124,23 @@ def _run_demo() -> int:
     return 0
 
 
-def _run_stage(stage: str, draft: str, report: str, requirement: str):
+def _build_rewriter():
+    """构造真实改写器；没配模型时返回 ``None``（退回骨架并如实标注）。
+
+    只有 **F2 改写** 有模型实现。E 阶段刻意不接模型（只改格式、不改内容），
+    A/B/C 与 D1/D3/D4 是确定性问题，D2 目前只有骨架生成器。
+    """
+    try:
+        from copilot.llm import LlmConfig
+        from copilot.quality.rewrite import LlmRewriter
+
+        return LlmRewriter(LlmConfig.from_env())
+    except Exception as exc:  # noqa: BLE001
+        print(f"⚠️ 未能启用模型（{type(exc).__name__}）：退回骨架路径", file=sys.stderr)
+        return None
+
+
+def _run_stage(stage: str, draft: str, report: str, requirement: str, rewriter=None):
     if stage == "E":
         from copilot.format_stage import run_format
 
@@ -132,7 +148,7 @@ def _run_stage(stage: str, draft: str, report: str, requirement: str):
     if stage == "F":
         from copilot.revise import run_revise
 
-        return run_revise(draft=draft, report=report or SAMPLE_REPORT)
+        return run_revise(draft=draft, report=report or SAMPLE_REPORT, rewriter=rewriter)
     if stage == "D":
         from copilot.writing import run_writing
 
@@ -179,6 +195,11 @@ def _prepare_streams() -> None:
 
 def main(argv: list[str] | None = None) -> int:
     _prepare_streams()
+    # 有 .env 就读进来（仓库根 / 当前目录都能找到）；没有也不报错，
+    # 需要模型的节点会退化成骨架并在报告里标注。
+    from copilot.llm import load_env
+
+    load_env()
     ap = argparse.ArgumentParser(
         prog="zhilun",
         description="织论 Zhilun —— 基于 LangGraph 的多智能体 AI 论文辅助系统",
@@ -198,6 +219,11 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--stage", choices=list("ABCDEF"), help="跳过主 Agent，直接跑某个阶段")
     ap.add_argument("--plan", action="store_true", help="只出计划，不执行")
     ap.add_argument("--demo", action="store_true", help="六阶段各跑一遍内置样例")
+    ap.add_argument(
+        "--llm",
+        action="store_true",
+        help="启用模型（F2 改写需要它才有实际效果；不加以则走骨架，不花钱）",
+    )
     ap.add_argument("--json", action="store_true", help="输出 JSON（便于脚本消费）")
     args = ap.parse_args(argv)
 
@@ -207,10 +233,11 @@ def main(argv: list[str] | None = None) -> int:
     draft = _read(args.draft, SAMPLE_DRAFT)
     report_text = _read(args.report, "")
     requirement = args.requirement or ""
+    rewriter = _build_rewriter() if args.llm else None
 
     if args.stage:
         try:
-            rep = _run_stage(args.stage, draft, report_text, requirement)
+            rep = _run_stage(args.stage, draft, report_text, requirement, rewriter=rewriter)
         except Exception as exc:  # noqa: BLE001
             print(f"❌ {type(exc).__name__}: {exc}", file=sys.stderr)
             return 1
@@ -232,6 +259,7 @@ def main(argv: list[str] | None = None) -> int:
         "requirement": requirement,
         "title": "（未命名）",
         "question": "（未提供）",
+        "rewriter": rewriter,
     }
     out = run_request(args.request, context=context, plan_only=args.plan)
 

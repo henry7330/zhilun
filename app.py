@@ -59,6 +59,11 @@ def _plan_rows(plan):
 
 
 def main() -> None:
+    # 页面启动时读一次 .env（仓库根或当前目录），让需要模型的节点真能调到模型。
+    from copilot.llm import load_env
+
+    load_env()
+
     st.set_page_config(page_title="织论 Zhilun", page_icon="📄", layout="wide")
 
     st.title("📄 织论 Zhilun")

@@ -145,6 +145,7 @@ zhilun/
 
 | 想看什么 | 去哪 |
 |---|---|
+| **怎么用（三种用法 / 每个阶段要什么输入 / 常见问题）** | [USAGE.md](USAGE.md) |
 | 系统设计与每个决策的理由 | **本文件下半部分**（完整设计文档，2000+ 行） |
 | 某个阶段怎么设计、怎么实现、踩过什么坑 | `05-format/README.md`、`06-revise/README.md` 等 |
 | 环境与中文路径的坑 | [05-format/ARCHITECTURE.md](05-format/ARCHITECTURE.md) |

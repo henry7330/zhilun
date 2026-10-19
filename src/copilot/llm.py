@@ -133,17 +133,48 @@ class LlmConfig:
         )
 
 
+def _env_candidates() -> list[Any]:
+    """``.env`` 的候选位置，按优先级排列。
+
+    为什么要列一串而不是只认一个：
+
+    - 用户可能从**仓库根**、**某个阶段目录**或**任意目录**运行；
+    - 包被 `pip install` 后，``__file__`` 在 ``site-packages`` 里，
+      "往上走"根本走不到仓库 —— 所以当前工作目录必须排第一；
+    - 源码开发时（editable 安装）``__file__`` 在 ``src/copilot/``，
+      往上两级就是仓库根，这一条覆盖"在别的目录里跑"的情况。
+    """
+    from pathlib import Path
+
+    cands = [Path.cwd() / ".env"]
+    here = Path(__file__).resolve()
+    for parent in here.parents:
+        cand = parent / ".env"
+        if cand not in cands:
+            cands.append(cand)
+    return cands
+
+
 def load_env(path: str | None = None) -> bool:
     """从 ``.env`` 加载环境变量，返回是否成功。
 
     **为什么是独立的模块级函数而不是 import 副作用**：
     库不应该"被 import 就读文件"。显式调用一次，行为可预期。
+
+    不传 ``path`` 时按 :func:`_env_candidates` 的顺序找第一个存在的 ``.env``。
     """
     try:
         from dotenv import load_dotenv
     except ImportError:  # pragma: no cover - python-dotenv 是核心依赖
         return False
-    return load_dotenv(dotenv_path=path, override=False)
+
+    if path is not None:
+        return load_dotenv(dotenv_path=path, override=False)
+
+    for cand in _env_candidates():
+        if cand.is_file():
+            return load_dotenv(dotenv_path=str(cand), override=False)
+    return False
 
 
 #: 传输层签名：``(url, headers, payload, timeout) -> (status_code, json_or_text)``
