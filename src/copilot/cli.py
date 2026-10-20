@@ -235,6 +235,15 @@ def main(argv: list[str] | None = None) -> int:
     requirement = args.requirement or ""
     rewriter = _build_rewriter() if args.llm else None
 
+    # 「不做静默失败」：E1 的 formatter 钩子还没有 LLM 实现，
+    # 传了 --requirement 也不会生效 —— 必须说出来，而不是让用户以为用上了。
+    if requirement.strip():
+        print(
+            "⚠️ --requirement 目前不会生效：E1 的 formatter 钩子尚未接入模型实现，"
+            "本次只跑 14 条固定格式规则。",
+            file=sys.stderr,
+        )
+
     if args.stage:
         try:
             rep = _run_stage(args.stage, draft, report_text, requirement, rewriter=rewriter)
