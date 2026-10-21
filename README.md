@@ -2262,7 +2262,7 @@ contracts.py  →  stage.py  →  01-topic  →  02-literature  →  04-writing�
 
 ```powershell
 # ① 安装（可编辑模式，装一次即可）
-cd E:\dev\zhilun
+cd E:\Project\agent\zhilun
 python -m pip install -e ".[dev]"
 
 # ② 自检（依赖 / import / 六个阶段是否就绪）

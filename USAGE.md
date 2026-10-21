@@ -7,7 +7,7 @@
 # 一、一次性准备
 
 ```bash
-cd E:\dev\zhilun
+cd E:\Project\agent\zhilun
 
 # 1) 装依赖（开发 + 网页）
 python -m pip install -e ".[dev,ui]"
@@ -189,7 +189,7 @@ A：报告里的片段不是逐字来自草稿。从查重报告里**原文复�
 A：`.env` 里默认的 `gpt-6.1-sol` 首字延迟约 37–47 秒。换成 `gpt-5.6-luna`（实测首字 5.6 秒）会快很多。
 
 **Q：`import copilot` 报找不到？**
-A：仓库路径含非 ASCII 字符时，`pip` 的 `.pth` 会被 `site.py` 按 cp936 解码成乱码后**静默跳过**。把仓库放到英文路径下（本仓库在 `E:\dev\zhilun`）。
+A：仓库路径含非 ASCII 字符时，`pip` 的 `.pth` 会被 `site.py` 按 cp936 解码成乱码后**静默跳过**。把仓库放到英文路径下（本仓库在 `E:\Project\agent\zhilun`）。
 
 **Q：跑测试报 `No module named 'langgraph.checkpoint.sqlite'`？**
 A：装 `.[dev]`。`langgraph-checkpoint-sqlite` 是**独立的包**，不在 langgraph 核心里。

@@ -86,7 +86,7 @@ E2 模块自己的 README 会说明它**如何复用**这里的 `evidence`。
 ## 测试
 
 ```powershell
-cd E:\dev\zhilun
+cd E:\Project\agent\zhilun
 python -m pytest 00-core/tests
 ```
 

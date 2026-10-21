@@ -50,7 +50,7 @@ ModuleNotFoundError: No module named 'copilot'   ← 但就是找不到
 ## 解法：把仓库放在英文路径下
 
 ```
-E:\dev\zhilun          ✅
+E:\Project\agent\zhilun          ✅
 D:\code\zhilun         ✅
 E:\学习\agent\...      ❌ 可编辑安装会静默失效
 ```
@@ -59,7 +59,7 @@ E:\学习\agent\...      ❌ 可编辑安装会静默失效
 
 | 路径 | `pip install -e .` | `import copilot` |
 |---|---|---|
-| `E:\dev\zhilun-probe` | 成功 | ✅ 成功 |
+| `E:\probe\zhilun` | 成功 | ✅ 成功 |
 | `E:\学习\agent\论文辅助系统` | "成功" | ❌ 失败 |
 
 ## 已经试过但无效的绕法
@@ -73,7 +73,7 @@ E:\学习\agent\...      ❌ 可编辑安装会静默失效
 | 手工把 `.pth` 写成 `\uXXXX` 转义 | ⚠️ 曾经可用，但**已废弃** —— 换路径、换环境都要重跑脚本 |
 
 **结论：别绕，直接放英文路径。** 本次已将仓库从 `E:\学习\agent\论文辅助系统`
-迁到 `E:\dev\zhilun`。
+迁到 `E:\Project\agent\zhilun`。
 
 ## 验证方法
 
